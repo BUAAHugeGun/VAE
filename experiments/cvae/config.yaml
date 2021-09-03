@@ -1,0 +1,25 @@
+data:
+  data_tag: cifar10
+  data_path: ../../../../data
+
+train:
+  lr: 0.0001
+  lr_milestone: [ 15, 30 ]
+  epoch: 50
+  image_size: 64
+  bs: 64
+  num_workers: 3
+  show_interval: 10
+  test_interval: 1
+  snapshot_interval: 2
+  load_epoch: -1
+
+loss_lambda:
+  kld: 0.005
+  mse: 1.
+
+model:
+  output_length: 128
+  num_classes: 10
+  in_channels: 3
+  depth: 5
